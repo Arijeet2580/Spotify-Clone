@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.logo img{
+    height: 33px;
+}
+nav ul{
+    display: flex;
+    height: 60px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+nav li{
+    margin:0 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav li:hover{
+    padding-bottom:10px;
+    font-weight: bold;
+}
+
+.bottom{
+    position:fixed;
+    background-color: black;
+    color: white;
+    height:100px;
+    width:100%;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+#ProgressBar{
+    width: 70vw;
+    margin-bottom:20px;
+    cursor: pointer;
+}
+.control i{
+    margin:0 10px;
+    cursor: pointer;
+}
+
+.container{
+    min-height: 75vh;
+    width: 80%;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding:40px;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.songList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.songItemContainer{
+    margin-top:24px;
+}
+.songItem{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-radius: 20px;
+    margin:12px 0;
+}
+.songItem img{
+    width:43px;
+    margin:0 23px; 
+    border-radius: 30px;
+}
+
+.timeStamp{
+    margin:0 23px;
+    cursor:pointer;
+}
+.songInfo{
+    position: absolute;
+    left:15vw;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+/* Media Query */
+@media screen and (max-width:844px){
+    .songInfo{
+        display: none;
+    }
+    .container{
+        background-image: url('img/bg2.jpeg');
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:750px) {
+    .songItem{
+        font-size: 1rem;
+    }
+}
